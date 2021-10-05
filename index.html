@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Landing Page Template</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./asset/css/base.css">
+        <link rel="stylesheet" href="./asset/css/main.css">
+        <link rel="stylesheet" href="../fontawesome-free-5.15.2-web/css/fontawesome.min.css">
+        <script src="https://kit.fontawesome.com/54f5e9521f.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+        <script>
+            function mouseOut(){
+                document.querySelector('.animate-icon').style.transform = 'rotate(0deg)'
+            }
+            function mouseIn(){
+                document.querySelector('.animate-icon').style.transform = 'rotate(-180deg)'
+            }
+
+            window.onscroll = function() {stick()};
+
+            var menuSticky = document.querySelector('.header');
+            var sticky = menuSticky.offsetTop;
+            console.log(sticky);
+            function stick() {
+                if (window.pageYOffset > sticky) {
+                    menuSticky.classList.add("disappear");
+                }else {
+                    menuSticky.classList.remove("disappear");
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div class="wrapper">
+            <header>
+                <div class="header">
+                    <nav class="header__menu">
+                        <div class="header__logo">
+                            <a href="" class="header__logo-link">
+                                <img src="./asset/img/logo-blue.png" alt="Shape" class="header__logo-img">
+                            </a>
+                        </div>
+                        <ul class="header__menu-list">
+                            <li class="header__menu-list-item has-mega">
+                                <a href="" class="list-item-link mega-link">Demos
+                                </a>
+                                <i class="fas fa-angle-down animate-icon"></i>
+                                <ul class="subbox-list">
+                                    <li class="subbox-list-item">
+                                       <a href="" class="subbox-list-item-link">Dropdown 01</a>
+                                     </li>
+                                    <li class="subbox-list-item">
+                                       <a href="" class="subbox-list-item-link">Dropdown 02</a>
+                                     </li>
+                                    <li class="subbox-list-item">
+                                       <a href="" class="subbox-list-item-link">Dropdown 03</a>
+                                    </li>
+                                    <li class="subbox-list-item">
+                                       <a href="" class="subbox-list-item-link">Dropdown 04</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="header__menu-list-item">
+                                <a href="" class="list-item-link">Featuers</a>
+                            </li>
+                            <li class="header__menu-list-item">
+                                <a href="" class="list-item-link">Support</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="header__submit">
+                        <a href="" class="header__submit-link">
+                            Login
+                        </a>
+                        <a href="" class="header__submit-link download">
+                           Download Now
+                        </a>
+                    </div>
+                </div>
+            </header>
+            <div class="content row">
+                <div class="row align-item-center mg-r-8">
+                    <img src="./asset/img/hero-shape-1.svg" alt="animate-1">
+                </div>
+                <div class="main__content row justify-content-center">
+                    <div class="content__heading container justify-content-center">
+                        <h1>Landing page
+                            <br>
+                            built for software.
+                        </h1>
+                    
+                        <div class="row justify-content-sb">
+                            <div class="content__text">
+                                <span class="wd-6" style="background-color: var(--subcolor);"></span>
+                                <p>Create custom landing pages with Shades that convert more visitors than any website—no coding required.</p>
+                            </div>
+                            <div class="content__link">
+                                <a href="" class="download">Download Free Trial</a>
+                            </div>
+                        </div>
+                        <div class="row compitable">
+                            <div class="compitable-text">
+                                <p>Compitable with:</p>
+                            </div>
+                            <div class="compitable-icon">
+                                <i class="fab fa-windows"></i>
+                                <i class="fab fa-apple"></i>
+                                <i class="fab fa-linux"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row align-item-end">
+                    <img src="./asset/img/hero-shape-2.png" alt="animate-1">
+                </div>
+                <div class="row container justify-content-center">
+                    <img src="./asset/img/laptop-screen.png">
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
